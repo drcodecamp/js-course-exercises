@@ -1,137 +1,58 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="he">
   <head>
-    <!-- SEO  -->
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 2 שימוש במחרוזות</title>
-    
+
     <link
-      rel="canonical"
       href="https://www.doctorcode.org/courses/exercise/javascript-exercise_2.html"
+      rel="canonical"
     />
     <meta
-      property="og:url"
       content="https://www.doctorcode.org/courses/exercise/javascript-exercise_2.html"
+      property="og:url"
     />
     <meta
+      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
       property="og:title"
-      content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
     />
     <meta
-      property="og:description"
       content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 2 שימוש במחרוזות"
+      property="og:description"
     />
     <meta
-      property="og:image"
       content="https://www.doctorcode.org/courses/imgs/javascript-course.webp"
+      property="og:image"
     />
-    <meta property="og:image:width" content="1000" />
-    <meta property="og:image:height" content="667" />
+    <meta content="1000" property="og:image:width" />
+    <meta content="667" property="og:image:height" />
+
+    <meta content="דוקטור קוד" property="og:site_name" />
+    <meta content="he" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
     <meta
-      name="facebook-domain-verification"
-      content="1eh2cz9h64tmar4i4ppd2tne664suc"
-    />
-    <meta property="og:site_name" content="דוקטור קוד" />
-    <meta property="og:locale" content="he" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
       content="קורס תכנות אונליין ג'אווה סקריפט המדריך המלא 2023 | דוקטור קוד"
+      name="twitter:title"
     />
     <meta
-      name="description"
       content="בתרגיל ג'אווה סקריפט הבא נלמד איך לקבל ערך ישירות מהמשתמש ולאחר מכן להשתמש באופירטורים השונים כדי לשרשר מחרוזות שונות וליצור מהן מחרוזת אחת חדשה."
+      name="description"
     />
-    <!-- SEO  -->
-    <!-- CSS  -->
+
     <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
-    <!-- Google Fonts  -->
+
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Google Fonts  -->
-    <!-- Site Scripts  -->
 
-    <!-- Google Scripts  -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VZL14570TY"
-    ></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-995149719"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "AW-995149719");
-    </script>
-    <!-- Event snippet for יצירת קשר ליד conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
-        gtag("event", "conversion", {
-          send_to: "AW-995149719/_Ce8COiXpt4DEJePw9oD",
-          event_callback: callback,
-        });
-        return false;
-      }
-    </script>
-    <!-- Google Scripts  -->
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "1495457734201078");
-      fbq("track", "PageView");
-    </script>
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
-        alt=""
-      />
-    </noscript>
-    <!-- End Meta Pixel Code -->
     <style>
       :root {
         --text-color-1: #edda40;
@@ -140,11 +61,7 @@
     </style>
   </head>
   <body id="home">
-
-    
-
-    <!-- Hero Section !-->
-    <section class="full-h ">
+    <section class="full-h">
       <div class="container">
         <div style="display: flex; justify-content: space-between">
           <div class="bold">התקדמות שלך</div>
@@ -185,7 +102,7 @@
           </li>
         </ul>
 
-        <div style="display: none; width: 100%" id="result">
+        <div id="result" style="display: none; width: 100%">
           <pre><code class="language-js">
 var firstName = prompt('please enter your first name')
 var lastName = prompt('please enter your last name')
@@ -208,21 +125,12 @@ alert('Hello ' + firstName + ' ' + lastName)
       </div>
     </section>
 
-    <!-- Contact Section !-->
-
-
-
-
-   
-    
     <script src="src/menu.min.js"></script>
     <script src="src/util.min.js"></script>
     <script src="src/prism.min.js"></script>
     <script>
       const onSolution = () => {
-        var firstName = prompt("please enter your first name");
-        var lastName = prompt("please enter your last name");
-        alert("Hello " + firstName + " " + lastName);
+        /* todo remove this line and start your answer */
       };
     </script>
     <script>

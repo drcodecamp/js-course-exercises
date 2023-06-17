@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="he">
   <head>
-    <!-- SEO  -->
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 38 מציאת DNA</title>
-    
+
     <link
       rel="canonical"
       href="https://www.doctorcode.org/courses/exercise/javascript-exercise_38.html"
@@ -43,37 +42,20 @@
       name="description"
       content="בתרגיל ג'אווה סקריפט הבא נלמד איך לייצר מחרוזת  ספציפית מתוך מערך קיים,  התרגיל הינו לבחור אות אחת מתוך מערך קיים כל פעם עד שנקבל שלושה אותיות בסדר ספציפי תוך כדי שמירה על ביצועי מהירים וחישוב מדויק"
     />
-    <!-- SEO  -->
-    <!-- CSS  -->
+
     <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
-    <!-- CSS  -->
 
-    <!-- Google Fonts  -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Google Fonts  -->
 
-    <!-- Site Scripts  -->
-
-    <!-- Site Scripts  -->
-
-    <!-- Google Scripts  -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VZL14570TY"
-    ></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-995149719"
-    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -83,51 +65,6 @@
       gtag("config", "AW-995149719");
     </script>
 
-    <!-- Event snippet for יצירת קשר ליד conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
-        gtag("event", "conversion", {
-          send_to: "AW-995149719/_Ce8COiXpt4DEJePw9oD",
-          event_callback: callback,
-        });
-        return false;
-      }
-    </script>
-    <!-- Google Scripts  -->
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "1495457734201078");
-      fbq("track", "PageView");
-    </script>
     <noscript
       ><img
         height="1"
@@ -135,7 +72,7 @@
         style="display: none"
         src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
+
     <style>
       :root {
         --text-color-1: #edda40;
@@ -150,11 +87,7 @@
     </style>
   </head>
   <body id="home">
-
-    
-
-    <!-- Hero Section !-->
-    <section class="full-h ">
+    <section class="full-h">
       <div class="container">
         <div style="display: flex; justify-content: space-between">
           <div class="bold">התקדמות שלך</div>
@@ -264,46 +197,13 @@ console.log('it took', numOfIterations, 'iterations to find', myChain)
       </div>
     </section>
 
-    <!-- Contact Section !-->
-
-
-
-
-   
-    
     <script src="src/menu.min.js"></script>
     <script src="src/util.min.js"></script>
 
     <script src="src/prism.min.js"></script>
     <script>
       const onSolution = () => {
-        const charBank = ["r", "n", "a", "d", "b", "p"];
-        let myChain = "";
-        let numOfIterations = 0;
-        let safeGuard = 1000;
-
-        const getRandomIntInclusive = (min, max) =>
-          Math.floor(
-            Math.random() * (Math.floor(max) - Math.ceil(min) + 1) +
-              Math.ceil(min)
-          );
-
-        while (
-          myChain !== "rna" ||
-          myChain !== "dna" ||
-          numOfIterations < safeGuard
-        ) {
-          numOfIterations++;
-          for (let i = 0; i < 3; i++) {
-            const randomIdx = getRandomIntInclusive(0, charBank.length - 1);
-            myChain += charBank[randomIdx];
-          }
-          if (myChain === "dna" || myChain === "rna") {
-            break;
-          }
-          myChain = "";
-        }
-        alert(`it took ${numOfIterations} iterations to find ${myChain}`);
+        /* todo remove this line and start your answer */
       };
     </script>
     <script>

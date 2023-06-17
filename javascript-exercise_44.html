@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="he">
   <head>
-    <!-- SEO  -->
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>
       ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 44 אפליקציית פוקימונים
     </title>
-    
     <link
       rel="canonical"
       href="https://www.doctorcode.org/courses/exercise/javascript-exercise_44.html"
@@ -45,198 +43,19 @@
       name="description"
       content="בתרגיל הבא נלמד איך לקלוט מהמשתמש את מספר הפוקימונים שהוא רוצה שיוצגו לו, נלמד איך  לרנדר לתוך הDOM את כמות הפוקימונים הנדרשת ובכך ליצור מעיין פוקידקס שמציג תמונות של פוקימונים"
     />
-    <!-- SEO  -->
 
-    <!-- CSS  -->
     <link href="css/index.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/reset.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/loader.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/prism.min.css?v=1.0.0" rel="stylesheet" />
     <link href="css/exercise.min.css?v=1.0.0" rel="stylesheet" />
-    <!-- CSS  -->
 
-    <!-- Google Fonts  -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Google Fonts  -->
-
-    <!-- Site Scripts  -->
-
-    <!-- Site Scripts  -->
-
-    <!-- Google Scripts  -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VZL14570TY"
-    ></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-995149719"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "AW-995149719");
-    </script>
-
-    <!-- Event snippet for יצירת קשר ליד conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
-        gtag("event", "conversion", {
-          send_to: "AW-995149719/_Ce8COiXpt4DEJePw9oD",
-          event_callback: callback,
-        });
-        return false;
-      }
-    </script>
-    <!-- Google Scripts  -->
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "1495457734201078");
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1495457734201078&ev=PageView&noscript=1"
-    /></noscript>
-    <style>
-      .app-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 70px;
-      }
-      .app-options {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .game-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .cards-container {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        flex-direction: row;
-        justify-content: center;
-      }
-      .filter {
-        padding: 10px;
-        cursor: pointer;
-      }
-      .filter #option {
-        cursor: pointer;
-      }
-      .card {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        color: black;
-        width: 400px;
-        height: 400px;
-        margin: 10px;
-        cursor: pointer;
-        transition: all 0.25s linear;
-      }
-      .card-price:hover {
-        transform: scale(1.1);
-      }
-      .pokemon-container {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .pokemon-image {
-        margin: 20px;
-        padding: 20px;
-        width: 150px;
-        height: 150px;
-        border-radius: 21px;
-        background: var(--card-bg);
-      }
-
-      .pokemon-image:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: all 0.1s linear;
-      }
-
-      .exercise-input {
-        padding: 10px;
-        margin: 10px;
-      }
-
-      /* Tooltip container */
-      .tooltip {
-        position: relative;
-        display: inline-block;
-      }
-
-      /* Tooltip text */
-      .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 150px;
-        background-color: rgba(74, 74, 117, 0.65);
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        position: absolute;
-        z-index: 1;
-        top: -55px;
-      }
-
-      /* Show the tooltip text when you mouse over the tooltip container */
-      .tooltip:hover .tooltiptext {
-        visibility: visible;
-      }
-    </style>
-    <!-- End Meta Pixel Code -->
     <style>
       :root {
         --text-color-1: #edda40;
@@ -245,11 +64,7 @@
     </style>
   </head>
   <body id="home">
-
-    
-
-    <!-- Hero Section !-->
-    <section class="full-h ">
+    <section class="full-h">
       <div class="container">
         <div style="display: flex; justify-content: space-between">
           <div class="bold">התקדמות שלך</div>
@@ -348,14 +163,6 @@
         <div class="questions-list lg"></div>
       </div>
     </section>
-
-    <!-- Contact Section !-->
-
-
-
-
-   
-    
     <script src="src/menu.min.js"></script>
     <script src="src/util.min.js"></script>
     <script>
